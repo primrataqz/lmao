@@ -163,7 +163,15 @@ fi
 
 x() {
 
-    xvfb-run manimgl "$1" -sw -r 1080x1080
+    if xvfb-run manimgl test.py -sw -r 1080x1080 -c "#141414"; then
+        clear
+    fi
+
+}
+
+xx() {
+
+    python3 -m http.server
 
 }
 

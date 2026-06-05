@@ -1,0 +1,1 @@
+xvfb-run manimgl test.py -sw -r 3840x3840 -c "#ffffff"
