@@ -6,7 +6,7 @@ class PaidTemplate(InteractiveScene):
 
     def setup(self):
         super().setup()
-        logo = Tex(R"\langle \psi \rangle")
+        self.logo = logo = Tex(R"\langle \psi \rangle")
         logo.scale(0.8)
         logo.set_color(PURPLE_A)
         logo.to_edge(UL, buff=MED_SMALL_BUFF)
@@ -103,6 +103,6 @@ class Paid2(PaidTemplate):
     pgno = "2"
 
     def construct(self):
-        why = TexText("Why This Collection?")
-        why.next_to(self.title, DOWN, buff=MED_LARGE_BUFF)
+        why = TexText("Why This Collection?", font_size=36)
+        why.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DL)
         self.add(why)
