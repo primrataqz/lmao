@@ -105,4 +105,5 @@ class Paid2(PaidTemplate):
     def construct(self):
         why = TexText("Why This Collection?", font_size=36)
         why.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DL)
+        why.shift(0.1 * DR)
         self.add(why)
