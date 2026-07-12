@@ -100,7 +100,7 @@ class Paid(PaidTemplate):
         self.add(inside)
 
 
-class Paid1(PaidTemplate):
+class Paid2(PaidTemplate):
     pgno = "2"
 
     def construct(self):
