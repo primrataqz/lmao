@@ -148,7 +148,7 @@ class Pricing(PaidTemplate):
             alignment=r"\flushleft",
             font_size=36,
         )
-        pricing.next_to(pricing, DOWN, buff=MED_LARGE_BUFF, aligned_edge=ORIGIN)
+        pricing.next_to(pricing, DOWN, buff=MED_LARGE_BUFF)
         self.add(pricing)
 
         best = TexText(
