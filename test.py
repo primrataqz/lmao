@@ -2,6 +2,7 @@ from manimlib import *
 
 class PaidTemplate(InteractiveScene):
     pgno = "1"
+    title_0 = "Ultimate Learning Bundle (200+GB)"
 
     def setup(self):
         super().setup()
@@ -35,18 +36,16 @@ class PaidTemplate(InteractiveScene):
         vg.next_to(h_line, DOWN, buff=SMALL_BUFF)
         self.add(vg)
 
+        self.title = title = TexText(str(self.title_0), font_size=30)
+        title.next_to(self.v_line, RIGHT)
+        self.add(title)
 
 class Paid(PaidTemplate):
     pgno = "1"
-    title_0 = "Ultimate Learning Bundle (200+GB)"
 
     def construct(self):
-        title = TexText(str(self.title_0), font_size=30)
-        title.next_to(self.v_line, RIGHT)  # v_line
-        self.add(title)
-
         cont = TexText(R"The Knowledge Vault")
-        cont.next_to(title, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=ORIGIN)
+        cont.next_to(self.title, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=ORIGIN)
         cont_underline = Underline(cont, stroke_width=[0.5, 2, 2, 0.5])
         self.add(cont, cont_underline)
 
@@ -104,5 +103,6 @@ class Paid2(PaidTemplate):
     pgno = "2"
 
     def construct(self):
-        # Page 2 content
-        pass
+        why = TexText("Why This Collection?")
+        why.next_to(self.title)
+        self.add(why)
