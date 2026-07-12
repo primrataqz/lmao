@@ -103,7 +103,7 @@ class Paid2(PaidTemplate):
     pgno = "2"
 
     def construct(self):
-        why = TexText("Why This Collection?", font_size=36)
+        why = TexText("Why This Collection?", font_size=40)
         why.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DL)
         why.shift(0.1 * DR)
         self.add(why)
@@ -118,7 +118,7 @@ class Paid2(PaidTemplate):
             \hspace*{0.45cm}Computer Science, AI, Astronomy, and more.\\[0.25cm]
             $\checkmark$ Suitable for students, self-learners,\\
             \hspace*{0.45cm}educators, and enthusiasts.
-            """, alignment=r"\flushleft", font_size=24,
+            """, alignment=r"\flushleft", font_size=28,
         )
         why_body.next_to(why, DOWN, aligned_edge=LEFT)
         self.add(why_body)
