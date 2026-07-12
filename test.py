@@ -1,37 +1,108 @@
 from manimlib import *
 
-class Template(InteractiveScene):
-    def construct(self):
-        logo = Tex(R"\langle \phi \rangle")
+class PaidTemplate(InteractiveScene):
+    pgno = "1"
+
+    def setup(self):
+        super().setup()
+        logo = Tex(R"\langle \psi \rangle")
+        logo.scale(0.8)
         logo.set_color(PURPLE_A)
-        logo.scale(0.6)
         logo.to_edge(UL, buff=MED_SMALL_BUFF)
         self.add(logo)
 
-        v_line = Line(UP, DOWN)
-        v_line.set_height(logo.get_height()*1.7)
-        v_line.next_to(logo, RIGHT)
+        self.v_line = v_line = Line(UP, DOWN)
+        v_line.set_height(logo.get_height() * 1.5)
+        v_line.next_to(logo, RIGHT, buff=MED_SMALL_BUFF)
         v_line.insert_n_curves(10)
-        v_line.set_stroke(width=[0.5, 1, 1, 0.5])
+        v_line.set_stroke(width=[0.5, 1.5, 1.5, 0.5])
         self.add(v_line)
 
-        h_line = Line(LEFT, RIGHT)
+        self.h_line = h_line = Line(LEFT, RIGHT)
         h_line.set_width(FRAME_WIDTH - 1)
-        h_line.to_edge(DOWN)
+        h_line.to_edge(DOWN, buff=MED_LARGE_BUFF * 0.75 + SMALL_BUFF)
         h_line.insert_n_curves(10)
-        h_line.set_stroke(width=[0.5, 1.0, 1.0, 0.5])
+        h_line.set_stroke(width=[0.5, 2, 2, 0.5])
         self.add(h_line)
 
-        page_no = Integer(1)
+        pg = TexText(str(self.pgno))
         cir = Circle(radius=0.1)
-        cir.set_stroke(WHITE, 1.0)
-        cir.set_fill("#191919")
-        page_no.set_height(cir.get_height()*0.5)
-        page_no.move_to(cir)
-        vgroup = VGroup(cir, page_no)
-        vgroup.next_to(h_line, DOWN, buff=SMALL_BUFF)
-        self.add(vgroup)
+        cir.set_stroke(width=1, color=WHITE)
+        cir.set_fill("#191919", 1.0)
+        pg.move_to(cir)
+        pg.set_height(cir.get_height() * 0.5)
+        vg = VGroup(cir, pg)
+        vg.next_to(h_line, DOWN, buff=SMALL_BUFF)
+        self.add(vg)
 
-        title = Tex(R"\text{Taylor Series}", font_size=40)
-        title.next_to(v_line, RIGHT)
+
+class Paid(PaidTemplate):
+    pgno = "1"
+    title_0 = "Ultimate Learning Bundle (200+GB)"
+
+    def construct(self):
+        title = TexText(str(self.title_0), font_size=30)
+        title.next_to(self.v_line, RIGHT)  # v_line
         self.add(title)
+
+        cont = TexText(R"The Knowledge Vault")
+        cont.next_to(title, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=ORIGIN)
+        cont_underline = Underline(cont, stroke_width=[0.5, 2, 2, 0.5])
+        self.add(cont, cont_underline)
+
+        cont1 = TexText("200GB+ Curated Educational Library", font_size=30)
+        cont1.next_to(cont_underline, DOWN, buff=MED_LARGE_BUFF * 0.45)
+        self.add(cont1)
+
+        itm = BulletedList(
+            "7000+ PDFs",
+            "Books",
+            "Lecture Notes",
+            "Research Papers",
+            "Beginners to Advanced Resources",
+            buff=SMALL_BUFF,
+            font_size=26
+        )
+        itm.next_to(cont1, DOWN, buff=MED_LARGE_BUFF * 0.45, aligned_edge=LEFT)
+        self.add(itm)
+
+        cont2 = TexText(
+            R"""
+            \begin{minipage}{0.85\textwidth}
+            Whether you're a student, self-learner, programmer,
+            researcher, or simply curious about science, this
+            collection brings thousands of carefully organized
+            educational resources together in one place.
+            \end{minipage}
+            """,
+            font_size=20,
+        )
+        cont2.next_to(itm, DOWN, buff=MED_LARGE_BUFF * 0.45, aligned_edge=LEFT)
+        self.add(cont2)
+
+        inside = VGroup(
+            TexText("Inside you'll find:", font_size=26),
+            BulletedList(
+                "Mathematics",
+                "Physics",
+                "Chemistry",
+                "Quantum Mechanics",
+                "Astronomy",
+                "Computer Science",
+                R"Artificial Intelligence \& Machine Learning",
+                buff=SMALL_BUFF,
+                font_size=20
+            )
+        )
+        inside.arrange(DOWN, buff=SMALL_BUFF, aligned_edge=LEFT)
+        inside[0].shift(LEFT * 0.5)
+        inside.next_to(cont2, DOWN, aligned_edge=LEFT)
+        self.add(inside)
+
+
+class Paid1(PaidTemplate):
+    pgno = "2"
+
+    def construct(self):
+        # Page 2 content
+        pass
