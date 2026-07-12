@@ -120,5 +120,5 @@ class Paid2(PaidTemplate):
             \hspace*{0.45cm}educators, and enthusiasts.
             """, alignment=r"\flushleft", font_size=24,
         )
-        why_body.next_to(why, DOWN, aligned_edge=DL)
+        why_body.next_to(why, DOWN, aligned_edge=LEFT)
         self.add(why_body)
