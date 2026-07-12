@@ -107,3 +107,18 @@ class Paid2(PaidTemplate):
         why.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DL)
         why.shift(0.1 * DR)
         self.add(why)
+
+        why_body = TexText(
+            r"""
+            $\checkmark$ Save hundreds of hours searching for quality resources.\\[0.25cm]
+            $\checkmark$ Beginner to Advanced learning materials.\\[0.25cm]
+            $\checkmark$ Books, Lecture Notes, and Research Papers.\\[0.25cm]
+            $\checkmark$ Carefully organized folders for easy navigation.\\[0.25cm]
+            $\checkmark$ Covers Mathematics, Physics, Chemistry,\\
+            \hspace*{0.45cm}Computer Science, AI, Astronomy, and more.\\[0.25cm]
+            $\checkmark$ Suitable for students, self-learners,\\
+            \hspace*{0.45cm}educators, and enthusiasts.
+            """, alignment=r"\flushleft", font_size=24,
+        )
+        why_body.next_to(why, DOWN, aligned_edge=DL)
+        self.add(why_body)
