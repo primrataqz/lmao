@@ -163,7 +163,7 @@ fi
 
 x() {
 
-    if xvfb-run manimgl "${1:-test.py}$" -sw -r 1080x1080 -c "#141414"; then
+    if xvfb-run manimgl "${1:-test.py}" -sw -r 1080x1080 -c "#141414"; then
         ./g
         clear
     fi
