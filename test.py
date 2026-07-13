@@ -142,5 +142,5 @@ class Pricing(PaidTemplate):
             \textbf{Full Bundle (200GB+)} & \textbf{\$25}
             \end{tabular}
             """, font_size=30)
-        pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DOWN)
+        pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF, aligned_edge=DR)
         self.add(pricing)
