@@ -187,9 +187,9 @@ class Payment(PaidTemplate):
             SVGMobject("debit.svg").set_color(WHITE),
             SVGMobject("upi.svg")
         )
-        svgs.scale(0.3)
+        svgs.scale(0.4)
         svgs.arrange(DOWN, buff=MED_SMALL_BUFF, aligned_edge=LEFT)
-        svgs.next_to(payment, DOWN)
+        svgs.next_to(payment, DOWN, aligned_edge=LEFT)
         svgs[-1][0].set_color(WHITE)
         svgs[-1][1].set_color(WHITE)
         self.add(svgs)
