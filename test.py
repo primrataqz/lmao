@@ -223,14 +223,17 @@ class Dis(PaidTemplate):
     pgno = "5"
 
     def construct(self):
+        t = TexText("Disclaimer:")
+        t.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
+        self.add(t)
         dis = TexText(
             """
             \\textbf{Disclaimer}\\
-            \\vspace{0.2cm}
-            This collection contains educational resources gathered and organized\\
-            for convenience. I do not claim ownership of any third-party copyrighted\\
-            content. All rights remain with their respective authors, publishers,\\
+            This collection contains educational resources gathered\\ and organized
+            for convenience. I do not claim ownership of any third-party\\ copyrighted
+            content. All rights remain with their respective authors,\\ publishers,
             and copyright holders.
             """, alignment=R"\flushleft"
         ).set_width(FRAME_WIDTH - 1)
+        dis.next_to(t, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
         self.add(dis)
