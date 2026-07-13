@@ -165,7 +165,7 @@ class Payment(PaidTemplate):
             \textbf{"ASTRONOMY"}\\
             \textbf{"CS"}\\
             \textbf{"FULL"}
-            """, font_size=28,
+            """, alignment=R"\flushleft", font_size=28,
         )
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
         self.add(body)
