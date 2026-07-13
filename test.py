@@ -225,7 +225,7 @@ class Dis(PaidTemplate):
     def construct(self):
         t = TexText("Disclaimer:")
         t.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
-        t.shift(0)
+        t.shift(0.25 * RIGHT)
         under = Underline(t, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(t, under)
         dis = TexText(
