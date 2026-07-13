@@ -158,17 +158,17 @@ class Payment(PaidTemplate):
         body = TexText(
             r"""
             DM or Comment:\\[0.25cm]
-            \textbf{"MATH"}\\[0.1cm]
-            \textbf{"PHYSICS"}\\[0.1cm]
-            \textbf{"CHEMISTRY"}\\[0.1cm]
-            \textbf{"QUANTUM"}\\[0.1cm]
-            \textbf{"ASTRONOMY"}\\[0.1cm]
-            \textbf{"AI \& ML"}\\[0.1cm]
-            \textbf{"Computer Science"}\\[0.1cm]
-            \textbf{"FULL" (Recommended)}
-            """, isolate=['"FULL" (Recommended)'], alignment=R"\flushleft", font_size=28,
+            \textbf{MATH}\\[0.1cm]
+            \textbf{PHYSICS}\\[0.1cm]
+            \textbf{CHEMISTRY}\\[0.1cm]
+            \textbf{QUANTUM}\\[0.1cm]
+            \textbf{ASTRONOMY}\\[0.1cm]
+            \textbf{AI \& ML}\\[0.1cm]
+            \textbf{Computer Science}\\[0.1cm]
+            \textbf{FULL (Recommended)}
+            """, isolate=['FULL (Recommended)'], alignment=R"\flushleft", font_size=28,
         )
-        body['"FULL" (Recommended)'].set_color(YELLOW)
+        body['FULL (Recommended)'].set_color(YELLOW)
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
         self.add(body)
 
@@ -197,9 +197,10 @@ class Payment(PaidTemplate):
 
         info = TexText(
             r"""
-            $\checkmark$ Instant delivery after payment.\\
-            $\checkmark$ Secure download link.\\
-            $\checkmark$ Well-organized educational library.
+            $\checkmark$ Instant delivery after payment.\
+            $\checkmark$ Secure cloud download link.\\
+            $\checkmark$ Lifetime access to purchased content.\\
+            $\checkmark$ Free future updates (where applicable).
             """, alignment=R"\flushleft",
             font_size=26,
         )
