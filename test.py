@@ -223,7 +223,7 @@ class Dis(PaidTemplate):
     pgno = "5"
 
     def construct(self):
-        t = TexText("Disclaimer:").shift(RIGHT * 0.1)
+        t = TexText("Disclaimer:").shift(RIGHT * 0.25)
         t.next_to(self.logo, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
         under = Underline(t, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(t, under)
