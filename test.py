@@ -183,5 +183,7 @@ class Payment(PaidTemplate):
         self.add(payment, payment_un)
 
         svgs = VGroup(
-            SVGMobject()
+            SVGMobject("paypal.svg")
         )
+        svgs.next_to(payment, DOWN)
+        self.add(svgs)
