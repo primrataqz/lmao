@@ -231,6 +231,6 @@ class Dis(PaidTemplate):
             for convenience. I do not claim ownership of any third-party copyrighted\\
             content. All rights remain with their respective authors, publishers,\\
             and copyright holders.
-            """
+            """, alignment=R"\flushleft"
         )
         self.add(dis)
