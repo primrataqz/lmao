@@ -166,7 +166,7 @@ class Payment(PaidTemplate):
             \textbf{"AI \& ML"}\\
             \textbf{"Computer Science"}\\
             \textbf{"FULL" (Recommended)}
-            """, alignment=R"\flushleft", font_size=28,
+            """, isolate=['"FULL" (Recommended)'], alignment=R"\flushleft", font_size=28,
         )
         body['"FULL" (Recommended)'].set_color(PURPLE)
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
