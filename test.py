@@ -45,13 +45,13 @@ class Paid(PaidTemplate):
 
     def construct(self):
         cont = TexText(R"The Knowledge Vault")
-        cont.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=LEFT).shift(RIGHT * 0.1)
+        cont.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=LEFT).shift(RIGHT * 0.2)
         cont_underline = Underline(cont, stroke_width=[0.5, 2, 2, 0.5])
         self.add(cont, cont_underline)
 
         cont1 = TexText("200GB+ Curated Educational Library", font_size=30)
         cont1.next_to(cont_underline, DOWN, buff=MED_LARGE_BUFF * 0.45)
-        cont1.to_edge(RIGHT)
+        # cont1.to_edge(RIGHT)
         self.add(cont1)
 
         itm = BulletedList(
