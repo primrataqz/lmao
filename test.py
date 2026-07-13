@@ -157,7 +157,7 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            DM or Comment with:\\[0.25cm]
+            DM or Comment:\\[0.25cm]
             \textbf{"MATH"}\\
             \textbf{"PHYSICS"}\\
             \textbf{"CHEMISTRY"}\\
@@ -171,7 +171,7 @@ class Payment(PaidTemplate):
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
         self.add(body)
 
-        payment = TexText(R"Payment accepted $\checkmark$").scale(0.8)
+        payment = TexText(R"Payment Methods $\checkmark$").scale(0.8)
         payment[-1].set_color(GREEN)
 
         payment_un = Line(LEFT, RIGHT)
@@ -184,12 +184,12 @@ class Payment(PaidTemplate):
 
         svgs = VGroup(
             SVGMobject("paypal.svg"),
-            SVGMobject("debit.svg").set_color(WHITE),
-            SVGMobject("upi.svg")
+            SVGMobject("upi.svg"),
+            SVGMobject("debit.svg").set_color(WHITE)
         )
         svgs.scale(0.4)
         svgs.arrange(DOWN, buff=MED_SMALL_BUFF, aligned_edge=LEFT)
         svgs.next_to(payment, DOWN, aligned_edge=LEFT)
-        svgs[-1][0].set_color(WHITE)
-        svgs[-1][1].set_color(WHITE)
+        svgs[1][0].set_color(WHITE)
+        svgs[1][1].set_color(WHITE)
         self.add(svgs)
