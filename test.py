@@ -191,4 +191,5 @@ class Payment(PaidTemplate):
         svgs.arrange(DOWN, buff=MED_SMALL_BUFF, aligned_edge=LEFT)
         svgs.next_to(payment, DOWN)
         svgs[-1][0].set_color(WHITE)
+        svgs[-1][1].set_color(WHITE)
         self.add(svgs)
