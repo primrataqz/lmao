@@ -134,14 +134,14 @@ class Pricing(PaidTemplate):
         self.add(price, under)
         pricing = TexText(r"""
             \begin{tabular}{lr}
-            Mathematics & \$9.99\\
+            Mathematics & \$8.99\\
             Physics & \$6.99\\
             Chemistry & \$4.99\\
             Quantum Mechanics & \$7.99\\
             Astronomy & \$4.99\\
-            Ai \& ML & \$8.99\\
-            Computer Science & \$10\\[0.3cm]
-            \textbf{Full Bundle (200GB+)} & \textbf{\$25}
+            Ai \& ML & \$9.99\\
+            Computer Science & \$8.99\\[0.3cm]
+            \textbf{Full Bundle (200GB+)} & \textbf{\$30}
             \end{tabular}
             """, font_size=30)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
