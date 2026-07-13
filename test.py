@@ -145,3 +145,12 @@ class Pricing(PaidTemplate):
             """, font_size=38)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF)
         self.add(pricing)
+
+class Payment(PaidTemplate):
+    pgno = 4
+
+    def construct(self):
+        title = TexText(R"Interested?")
+        title.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.85, aligned_edge=LEFT)
+        under = Underline(title, stroke_width=[0.5, 1.5, 1.5, 0.5])
+        self.add(title, under)
