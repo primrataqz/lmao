@@ -128,8 +128,7 @@ class Pricing(PaidTemplate):
     
     def construct(self):
         price = TexText(R"\$ Pricing")
-        price.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.8, aligned_edge=DL)
-        price.shift(RIGHT * 0.1)
+        price.next_to(self.title, DOWN, buff=LARGE_BUFF * 0.8)
         under = Underline(price, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(price, under)
         pricing = TexText(r"""
@@ -143,6 +142,6 @@ class Pricing(PaidTemplate):
             Computer Science & \$8.99\\[0.3cm]
             \textbf{Full Bundle (200GB+)} & \textbf{\$29.99}
             \end{tabular}
-            """, font_size=30)
+            """, font_size=35)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
         self.add(pricing)
