@@ -173,6 +173,10 @@ class Payment(PaidTemplate):
 
         payment = TexText(R"Payment accepted $\checkmark$")
         payment[-1].set_color(GREEN)
-        payment.next_to(title, RIGHT, buff=LARGE_BUFF, aligned_edge=UP)
-        payment_un = Underline(payment, stroke_width=[0.5, 1.5, 1.5, 0.5])
+
+        payment_un = Line(LEFT, RIGHT)
+        payment_un.set_width(payment.get_width() * 1.2)
+        payment_un.set_stroke(width=[0.5, 1.5, 1.5, 0.5])
+        payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.8)
+        payment.next_to(payment_un, UP, buff=SMALL_BUFF)
         self.add(payment, payment_un)
