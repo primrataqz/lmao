@@ -232,5 +232,5 @@ class Dis(PaidTemplate):
             content. All rights remain with their respective authors, publishers,\\
             and copyright holders.
             """, alignment=R"\flushleft"
-        )
+        ).set_width(FRAME_WIDTH - 1)
         self.add(dis)
