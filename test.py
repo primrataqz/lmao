@@ -150,7 +150,7 @@ class Payment(PaidTemplate):
     pgno = 4
 
     def construct(self):
-        title = TexText(R"Interested?")
+        title = TexText(R"Interested?").scale(0.8)
         title.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.85, aligned_edge=LEFT).shift(RIGHT * 0.1)
         under = Underline(title, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(title, under)
@@ -171,13 +171,13 @@ class Payment(PaidTemplate):
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
         self.add(body)
 
-        payment = TexText(R"Payment accepted $\checkmark$")
+        payment = TexText(R"Payment accepted $\checkmark$").scale(0.8)
         payment[-1].set_color(GREEN)
 
         payment_un = Line(LEFT, RIGHT)
         payment_un.set_width(payment.get_width() * 1.2)
         payment_un.insert_n_curves(10)
         payment_un.set_stroke(width=[0.5, 1.5, 1.5, 0.5])
-        payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.5)
+        payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.45)
         payment.next_to(payment_un, UP, buff=SMALL_BUFF)
         self.add(payment, payment_un)
