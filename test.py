@@ -127,33 +127,15 @@ class Pricing(PaidTemplate):
     pgno = "3"
     
     def construct(self):
-        price_title = TexText(
-            r"\textbf{Pricing}",
-            font_size=44,
-        )
-        price_title.next_to(self.title, DOWN, buff=MED_LARGE_BUFF)
-        pt_underline = Underline(price_title, stroke_width=[0.5, 1.5, 1.5, 0.5])
-        self.add(pt_underline, price_title)
-
-        pricing = TexText(
-            R"""
-            Mathematics \hfill \$5.99\\
-            Physics \hfill \$4.99\\
-            Chemistry \hfill \$2.99\\
-            Quantum Mechanics \hfill \$7.99\\
-            Astronomy \hfill \$3.99\\
-            Computer Science \hfill \$15\\[0.25cm]
-            \textbf{Full Bundle (200GB+) \hfill \$25}
-            """,
-            alignment=r"\flushleft",
-            font_size=36,
-        )
-        pricing.next_to(pt_underline, DOWN, buff=MED_LARGE_BUFF)
+        pricing = TexText(r"""
+            \begin{tabular}{lr}
+            Mathematics & \$5.99\\
+            Physics & \$4.99\\
+            Chemistry & \$2.99\\
+            Quantum Mechanics & \$7.99\\
+            Astronomy & \$3.99\\
+            Computer Science & \$15\\[0.3cm]
+            \textbf{Full Bundle (200GB+)} & \textbf{\$25}
+            \end{tabular}
+            """, font_size=24)
         self.add(pricing)
-
-        best = TexText(
-            r"\textit{Best Value: Get the Full Bundle and access everything in one place.}",
-            font_size=28,
-        )
-        best.next_to(pricing, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
-        self.add(best)
