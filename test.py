@@ -160,11 +160,11 @@ class Payment(PaidTemplate):
             DM or Comment:\\[0.25cm]
             \textbf{"MATH"}\\[0.1cm]
             \textbf{"PHYSICS"}\\[0.1cm]
-            \textbf{"CHEMISTRY"}\\
-            \textbf{"QUANTUM"}\\
-            \textbf{"ASTRONOMY"}\\
-            \textbf{"AI \& ML"}\\
-            \textbf{"Computer Science"}\\
+            \textbf{"CHEMISTRY"}\\[0.1cm]
+            \textbf{"QUANTUM"}\\[0.1cm]
+            \textbf{"ASTRONOMY"}\\[0.1cm]
+            \textbf{"AI \& ML"}\\[0.1cm]
+            \textbf{"Computer Science"}\\[0.1cm]
             \textbf{"FULL" (Recommended)}
             """, isolate=['"FULL" (Recommended)'], alignment=R"\flushleft", font_size=28,
         )
