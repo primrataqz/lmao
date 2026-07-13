@@ -165,7 +165,7 @@ class Payment(PaidTemplate):
             \textbf{"ASTRONOMY"}\\
             \textbf{"AI \& ML"}\\
             \textbf{"Computer Science"}\\
-            \textbf{"FULL"}
+            \textbf{"FULL (Recommended)"}
             """, alignment=R"\flushleft", font_size=28,
         )
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
