@@ -154,3 +154,18 @@ class Payment(PaidTemplate):
         title.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.85, aligned_edge=LEFT).shift(RIGHT * 0.1)
         under = Underline(title, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(title, under)
+
+        body = TexText(
+            r"""
+            Send me a DM with:\\[0.4cm]
+            \textbf{"MATH"}\\
+            \textbf{"PHYSICS"}\\
+            \textbf{"CHEMISTRY"}\\
+            \textbf{"QUANTUM"}\\
+            \textbf{"ASTRONOMY"}\\
+            \textbf{"CS"}\\
+            \textbf{"FULL"}
+            """, font_size=28,
+        )
+        body.next_to(title, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
+        self.add(body)
