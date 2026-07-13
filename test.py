@@ -164,7 +164,7 @@ class Payment(PaidTemplate):
             \textbf{QUANTUM}\\[0.1cm]
             \textbf{ASTRONOMY}\\[0.1cm]
             \textbf{AI \& ML}\\[0.1cm]
-            \textbf{Computer Science}\\[0.1cm]
+            \textbf{COMPUTER SCIENCE}\\[0.1cm]
             \textbf{FULL (Recommended)}
             """, isolate=['FULL (Recommended)'], alignment=R"\flushleft", font_size=28,
         )
