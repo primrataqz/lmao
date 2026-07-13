@@ -157,7 +157,7 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            DM or Comment:\\[0.25cm]
+            DM or Comment with:\\[0.25cm]
             \textbf{MATH}\\[0.1cm]
             \textbf{PHYSICS}\\[0.1cm]
             \textbf{CHEMISTRY}\\[0.1cm]
