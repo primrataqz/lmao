@@ -211,3 +211,8 @@ class Payment(PaidTemplate):
         dis.scale(0.25)
         dis.next_to(self.h_line.get_start(), DOWN, buff=MED_SMALL_BUFF * 0.67, aligned_edge=DL)
         self.add(dis)
+
+        dis2 = TexText(R"Digital product $\cdot$ No physical shipping.")
+        dis2.scale(0.25)
+        dis2.next_to(self.h_line.get_end(), DOWN, buff=MED_SMALL_BUFF * 0.67, aligned_edge=DR)
+        self.add(dis2)
