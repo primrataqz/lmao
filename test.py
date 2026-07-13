@@ -127,8 +127,9 @@ class Pricing(PaidTemplate):
     pgno = "3"
     
     def construct(self):
-        price = TexText(R"Pricing \$")
-        price.next_to(self.logo, DOWN, buff=LARGE_BUFF, aligned_edge=DL)
+        price = TexText(R"\$ Pricing")
+        price.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.8, aligned_edge=DL)
+        price.shift(RIGHT * 0.1)
         under = Underline(price, stroke_width=[0.5, 1.5, 1.5, 0.5])
         self.add(price, under)
         pricing = TexText(r"""
