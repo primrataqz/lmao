@@ -50,7 +50,8 @@ class Paid(PaidTemplate):
         self.add(cont, cont_underline)
 
         cont1 = TexText("200GB+ Curated Educational Library", font_size=30)
-        cont1.next_to(cont_underline, DOWN, buff=MED_LARGE_BUFF * 0.45, aligned_edge=LEFT)
+        cont1.next_to(cont_underline, DOWN, buff=MED_LARGE_BUFF * 0.45)
+        cont1.to_edge(RIGHT)
         self.add(cont1)
 
         itm = BulletedList(
