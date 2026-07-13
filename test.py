@@ -197,11 +197,11 @@ class Payment(PaidTemplate):
 
         info = TexText(
             r"""
-            Instant delivery after payment.
+            Instant delivery after payment.\\
             Secure download link.\\
             Well-organized educational library.
-            """,
-            font_size=20,
+            """, alignment=R"\flushleft",
+            font_size=26,
         )
         info.next_to(body, DOWN, aligned_edge=LEFT)
         self.add(info)
