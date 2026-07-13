@@ -197,7 +197,7 @@ class Payment(PaidTemplate):
 
         info = TexText(
             r"""
-            $\checkmark$ Instant delivery after payment.\
+            $\checkmark$ Instant delivery after payment.\\
             $\checkmark$ Secure cloud download link.\\
             $\checkmark$ Lifetime access to purchased content.\\
             $\checkmark$ Free future updates (where applicable).
