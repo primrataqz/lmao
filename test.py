@@ -197,9 +197,9 @@ class Payment(PaidTemplate):
 
         info = TexText(
             r"""
-            Instant delivery after payment.\\
-            Secure download link.\\
-            Well-organized educational library.
+            $\checkmark$ Instant delivery after payment.\\
+            $\checkmark$ Secure download link.\\
+            $\checkmark$ Well-organized educational library.
             """, alignment=R"\flushleft",
             font_size=26,
         )
