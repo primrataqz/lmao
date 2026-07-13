@@ -197,7 +197,7 @@ class Payment(PaidTemplate):
 
         info = TexText(
             r"""
-            Instant delivery after payment.\\
+            Instant delivery after payment.
             Secure download link.\\
             Well-organized educational library.
             """,
