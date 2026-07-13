@@ -218,3 +218,19 @@ class Payment(PaidTemplate):
         dis2.scale(0.25)
         dis2.next_to(self.h_line.get_end(), DOWN, buff=MED_SMALL_BUFF * 0.67, aligned_edge=DR)
         self.add(dis2)
+
+class Dis(PaidTemplate):
+    pgno = "5"
+
+    def construct(self):
+        dis = TexText(
+            """
+            \\textbf{Disclaimer}\\
+            \\vspace{0.2cm}
+            This collection contains educational resources gathered and organized\\
+            for convenience. I do not claim ownership of any third-party copyrighted\\
+            content. All rights remain with their respective authors, publishers,\\
+            and copyright holders.
+            """
+        )
+        self.add(dis)
