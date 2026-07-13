@@ -45,7 +45,7 @@ class Paid(PaidTemplate):
 
     def construct(self):
         cont = TexText(R"The Knowledge Vault")
-        cont.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=LEFT).shift(RIGHT * 0.2)
+        cont.next_to(self.logo, DOWN, buff=LARGE_BUFF * 0.5, aligned_edge=LEFT).shift(RIGHT * 0.25)
         cont_underline = Underline(cont, stroke_width=[0.5, 2, 2, 0.5])
         self.add(cont, cont_underline)
 
