@@ -168,7 +168,7 @@ class Payment(PaidTemplate):
             \textbf{"FULL" (Recommended)}
             """, alignment=R"\flushleft", font_size=28,
         )
-        body[-1].set_color(PURPLE)
+        body[-1:-20].set_color(PURPLE)
         body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.67, aligned_edge=LEFT)
         self.add(body)
 
