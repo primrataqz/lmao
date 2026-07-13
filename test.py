@@ -185,7 +185,7 @@ class Payment(PaidTemplate):
         svgs = VGroup(
             SVGMobject("paypal.svg"),
             SVGMobject("debit.svg").set_color(WHITE),
-            SVGMobject("upi.svg")
+            SVGMobject("upi.svg")[0].set_color(WHITE)
         )
         svgs.scale(0.3)
         svgs.arrange(DOWN, buff=MED_SMALL_BUFF, aligned_edge=LEFT)
