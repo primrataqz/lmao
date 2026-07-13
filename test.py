@@ -157,7 +157,7 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            Send me a DM with:\\[0.4cm]
+            Send me a DM with:\\[0.3cm]
             \textbf{"MATH"}\\
             \textbf{"PHYSICS"}\\
             \textbf{"CHEMISTRY"}\\
@@ -168,5 +168,5 @@ class Payment(PaidTemplate):
             \textbf{"FULL"}
             """, alignment=R"\flushleft", font_size=28,
         )
-        body.next_to(title, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
+        body.next_to(title, DOWN, buff=MED_LARGE_BUFF * 0.8, aligned_edge=LEFT)
         self.add(body)
