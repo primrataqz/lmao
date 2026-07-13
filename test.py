@@ -157,7 +157,7 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            Send me a DM with:\\[0.3cm]
+            Send me a DM or Comment with:\\[0.3cm]
             \textbf{"MATH"}\\
             \textbf{"PHYSICS"}\\
             \textbf{"CHEMISTRY"}\\
