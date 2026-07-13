@@ -194,3 +194,14 @@ class Payment(PaidTemplate):
         svgs[1][0].set_color(WHITE)
         svgs[1][1].set_color(WHITE)
         self.add(svgs)
+
+        info = TexText(
+            r"""
+            Instant delivery after payment.\\
+            Secure download link.\\
+            Well-organized educational library.
+            """,
+            font_size=20,
+        )
+        info.next_to(body, DOWN, aligned_edge=LEFT)
+        self.add(info)
