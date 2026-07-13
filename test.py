@@ -209,5 +209,5 @@ class Payment(PaidTemplate):
 
         dis = TexText("For educational purposes only.")
         dis.scale(0.25)
-        dis.next_to(self.h_line.get_start(), DOWN, buff=MED_SMALL_BUFF, aligned_edge=DL)
+        dis.next_to(self.h_line.get_start(), DOWN, buff=MED_SMALL_BUFF * 0.67, aligned_edge=DL)
         self.add(dis)
