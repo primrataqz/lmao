@@ -141,7 +141,7 @@ class Pricing(PaidTemplate):
             Astronomy & \$4.99\\
             Ai \& ML & \$9.99\\
             Computer Science & \$8.99\\[0.3cm]
-            \textbf{Full Bundle (200GB+)} & \textbf{\$30}
+            \textbf{Full Bundle (200GB+)} & \textbf{\$29.99}
             \end{tabular}
             """, font_size=30)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
