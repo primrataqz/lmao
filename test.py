@@ -178,6 +178,6 @@ class Payment(PaidTemplate):
         payment_un.set_width(payment.get_width() * 1.2)
         payment_un.insert_n_curves(10)
         payment_un.set_stroke(width=[0.5, 1.5, 1.5, 0.5])
-        payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.45)
+        payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.5)
         payment.next_to(payment_un, UP, buff=SMALL_BUFF)
         self.add(payment, payment_un)
