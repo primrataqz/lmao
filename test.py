@@ -181,3 +181,7 @@ class Payment(PaidTemplate):
         payment_un.next_to(under, RIGHT, buff=LARGE_BUFF * 0.85)
         payment.next_to(payment_un, UP, buff=SMALL_BUFF)
         self.add(payment, payment_un)
+
+        svgs = VGroup(
+            SVGMobject()
+        )
