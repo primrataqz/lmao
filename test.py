@@ -134,12 +134,13 @@ class Pricing(PaidTemplate):
         self.add(price, under)
         pricing = TexText(r"""
             \begin{tabular}{lr}
-            Mathematics & \$5.99\\
-            Physics & \$4.99\\
-            Chemistry & \$2.99\\
+            Mathematics & \$9.99\\
+            Physics & \$6.99\\
+            Chemistry & \$4.99\\
             Quantum Mechanics & \$7.99\\
-            Astronomy & \$3.99\\
-            Computer Science & \$15\\[0.3cm]
+            Astronomy & \$4.99\\
+            Ai \& ML & \$8.99\\
+            Computer Science & \$10\\[0.3cm]
             \textbf{Full Bundle (200GB+)} & \textbf{\$25}
             \end{tabular}
             """, font_size=30)
