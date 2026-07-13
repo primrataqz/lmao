@@ -163,7 +163,8 @@ class Payment(PaidTemplate):
             \textbf{"CHEMISTRY"}\\
             \textbf{"QUANTUM"}\\
             \textbf{"ASTRONOMY"}\\
-            \textbf{"CS"}\\
+            \textbf{"AI \& ML"}
+            \textbf{"Computer Science"}\\
             \textbf{"FULL"}
             """, alignment=R"\flushleft", font_size=28,
         )
